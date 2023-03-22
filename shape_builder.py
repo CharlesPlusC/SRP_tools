@@ -87,7 +87,7 @@ def generate_shape_coordinates(shape, params, center_coords, orientation):
 def ucl_format_coordinates(shape, params, center_coords, material_type, component_group, comment, reflectivity, specularity):
     """
     Convert the shape coordinates into the UCL format.
-    
+
     # Example usage:
     shape = 'polygon'
     params = {'n_sides': 5, 'side_length': 1}
@@ -221,6 +221,7 @@ if __name__ == '__main__':
         ('polygon', {'n_sides': 4, 'side_length': 1}, (0, 0, 0), (0, 90, 0)),
         ('polygon', {'n_sides': 4, 'side_length': 1}, (0, 0, 0), (0, 0, 0)),
         ('cuboid', {'width': 3, 'height': 10, 'depth': 3}, (0, 10, 0), (0, 0, 0)),
+        ('cuboid', {'width': 3, 'height': 2, 'depth': 3}, (0, 10, 3), (0, 0, 0))
     ]
 
     plot_shapes(shapes_data)
