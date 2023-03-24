@@ -1,0 +1,25 @@
+CYLINDER
+1 // 0 2 potato antenna1
+0.02
+-0.3 0.5 1.2
+-0.3 0.5 0.8
+CYLINDER
+2 // 0 2 potato antenna2
+0.02
+0.3 0.5 1.2
+0.3 0.5 0.8
+CYLINDER
+3 // 0 2 potato antenna3
+0.02
+0.0 0.5 1.2
+0.0 0.5 0.8
+CYLINDER
+4 // 0 4 potato paraboloid
+0.2
+0.0 0.5 -0.9
+0.0 0.5 -1.1
+CYLINDER
+5 // 0 5 potato rotated cylinder
+0.05
+0.74526211303706 0.5266165040370379 1.4798495121111137
+-0.74526211303706 0.4733834959629621 1.3201504878888861
