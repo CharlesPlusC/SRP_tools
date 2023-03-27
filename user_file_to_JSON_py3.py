@@ -282,7 +282,7 @@ if __name__ == '__main__':
 								"plateY", "plateZ","Beidou-IGSO","Beidou-GEO","GalileoIOV","GalileoFOC",
 								"GalileoIOV_full","GalileoIOV_box","GalileoFOC_full","SolarPanels_Gal","sentinel1",
                                 "Inmarsat4-F1","TB1_EG3","TB2_EG3","TB3_EG3","TB4_EG3","Sentinel-1_v01",
-                                "Sentinel-1_v02","Sentinel-1_v03","Sentinel-1_v04","GPSIIF_v01","GPSIIF_v02","GPSIIF_v03","Potato-Sat"]
+                                "Sentinel-1_v02","Sentinel-1_v03","Sentinel-1_v04","GPSIIF_v01","GPSIIF_v02","GPSIIF_v03","PotatoSat"]
     
     for spacecraftname in spacecraftlist:
         spacecraftMgr.convert_userfile2JSON(spacecraftname)
