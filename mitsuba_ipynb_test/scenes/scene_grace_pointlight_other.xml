@@ -1,0 +1,47 @@
+<scene version="3.0.0">
+    <default name="integrator" value="path" />
+    <default name="spp" value="64" />
+    <default name="resy" value="720" />
+    <default name="resx" value="1280" />
+    <default name="max_depth" value="65" />
+    <integrator type="$integrator">
+        <integer name="max_depth" value="$max_depth" />
+    </integrator>
+    <sensor type="perspective">
+        <float name="fov" value="60" />
+        <transform name="to_world">
+            <matrix value="-0.99069 0.007035 0.135953 -0.519664 9.40074e-010 0.998664 -0.0516768 0.817007 -0.136134 -0.0511957 -0.989367 3.82439 0 0 0 1" />
+        </transform>
+        <sampler type="independent">
+            <integer name="sample_count" value="$spp" />
+        </sampler>
+        <film type="hdrfilm">
+            <integer name="width" value="$resx" />
+            <integer name="height" value="$resy" />
+            <string name="file_format" value="openexr" />
+            <string name="pixel_format" value="rgb" />
+            <rfilter type="tent" />
+        </film>
+    </sensor>
+    <bsdf type="twosided" id="RoughAluminiumBSDF">
+        <bsdf type="roughconductor">
+            <float name="alpha" value="0.1" />
+            <string name="distribution" value="ggx" />
+            <rgb name="specular_reflectance" value="0.578596, 0.578596, 0.578596" />
+            <rgb name="eta" value="1.65746, 0.880369, 0.521229" />
+            <rgb name="k" value="9.22387, 6.26952, 4.837" />
+        </bsdf>
+    </bsdf>
+    <shape type="obj" id="RoughAluminium_0048">
+        <string name="filename" value="models/grace_small_nofloor.obj" />
+        <transform name="to_world">
+            <matrix value="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
+        </transform>
+        <boolean name="face_normals" value="true" />
+        <ref id="RoughAluminiumBSDF" />
+    </shape>
+    <emitter type="point">
+        <point name="position" x="-7" y="-7" z="-7"/>
+        <rgb name="intensity" value="2500, 2500, 2500"/>
+    </emitter>
+</scene>
